@@ -88,7 +88,6 @@ def update():
         if (authorMsg != newMsg) and (newMsg != "blank"):
             showAuthorMsg(newMsg)
 
-     ██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
 ██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
 ██████╦╝██║░░░░░███████║██║░░╚═╝█████═╝░
 ██╔══██╗██║░░░░░██╔══██║██║░░██╗██╔═██╗░
@@ -255,6 +254,16 @@ if (__name__ == "__main__"):
 
 # Start Ruuning Tool
 if (__name__ == "__main__"):
+    checkPy()
+    from more.data import *
+    logo()
+    update()
+    main()
+*
+    logo()
+    update()
+    main()
+__main__"):
     checkPy()
     from more.data import *
     logo()
