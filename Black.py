@@ -88,20 +88,6 @@ def update():
         if (authorMsg != newMsg) and (newMsg != "blank"):
             showAuthorMsg(newMsg)
 
-██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
-██████╦╝██║░░░░░███████║██║░░╚═╝█████═╝░
-██╔══██╗██║░░░░░██╔══██║██║░░██╗██╔═██╗░
-██████╦╝███████╗██║░░██║╚█████╔╝██║░╚██╗
-╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝
-
-███████╗██╗░░░░░░█████╗░░██████╗░
-██╔════╝██║░░░░░██╔══██╗██╔════╝░
-█████╗░░██║░░░░░███████║██║░░██╗░
-██╔══╝░░██║░░░░░██╔══██║██║░░╚██╗
-██║░░░░░███████╗██║░░██║╚██████╔╝
-╚═╝░░░░░╚══════╝╚═╝░░╚═╝░╚═════╝░ 
-    
-
 # Options Banner
 def banner():
     amount = str(main.amount)
@@ -211,6 +197,69 @@ if (__name__ == "__main__"):
     update()
     main()
 92m[\033[37m*\033[92m] \033[37mEnter Amount (\033[92mDefault: 10\033[37m):> \033[37m")
+    try:
+        amount = int(amount)
+    except:
+        amount = 10
+    
+    main.amount = amount
+    
+    delay = input("    \033[92m[\033[37m*\033[92m] \033[37mEnter Time(\033[92mSec\033[37m) Delay (\033[92mDefault: 2s\033[37m):> \033[37m")
+    try:
+        delay = int(delay)
+    except:
+        delay = 2
+    
+    main.delay = delay
+    
+    time.sleep(1)
+    logo()
+    banner()
+    sent = 0
+    
+    items = RUNNABLE_ITEMS
+    finished = False
+    
+    # Running through all apis using Global Variables
+    allFuncs = globals()
+    if check(sent):
+        sys.exit()
+    
+    while True:
+        for i in range(1, items+1):
+            success = allFuncs["api_"+str(i)](number)
+            if (success):
+                sent += 1
+                if(check(sent)):
+                    finished = True
+                    break
+            
+        if (finished):
+            break
+
+
+# Start Ruuning Tool
+if (__name__ == "__main__"):
+    checkPy()
+    from more.data import *
+    logo()
+    update()
+    main()
+*
+    logo()
+    update()
+    main()
+__main__"):
+    checkPy()
+    from more.data import *
+    logo()
+    update()
+    main()
+*
+    logo()
+    update()
+    main()
+Default: 10\033[37m):> \033[37m")
     try:
         amount = int(amount)
     except:
