@@ -88,12 +88,7 @@ def update():
         if (authorMsg != newMsg) and (newMsg != "blank"):
             showAuthorMsg(newMsg)
 
-
-#Logo
-def logo():
-    os.system("clear")
-    print("\033[94m┌────────────────────────────────────────┐".center(columns+5))
-    print("\033[94m│     \033[92m      ██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
+     ██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗
 ██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝
 ██████╦╝██║░░░░░███████║██║░░╚═╝█████═╝░
 ██╔══██╗██║░░░░░██╔══██║██║░░██╗██╔═██╗░
@@ -106,16 +101,7 @@ def logo():
 ██╔══╝░░██║░░░░░██╔══██║██║░░╚██╗
 ██║░░░░░███████╗██║░░██║╚██████╔╝
 ╚═╝░░░░░╚══════╝╚═╝░░╚═╝░╚═════╝░   \033[94m   │".center(columns+15))
-    print("\033[94m│     \033[92m \033[94m   │".center(columns+15))
-    print("\033[94m│     \033[92m   \033[94m   │".center(columns+15))
-    print("\033[94m│     \033[92m   \033[94m   │".center(columns+15))
-    print("\033[94m│                              \033[94m          │".center(columns+9))
-    print("\033[94m│ \033[95mAuthor : SALMAN SAIF                \033[94m│".center(columns+15))
-    print("│ \033[95mTool   : Unlimited SMS Bomber          \033[94m│".center(columns+9))
-    print("│ \033[95mGitHub : https://github.com/bootexe221 \033[94m│".center(columns+9))
-    print("│ \033[95mCoder  : SAIF             \033[37mV4.1 \033[94m│".center(columns+15))
-    print("\033[94m└────────────────────────────────────────┘".center(columns+5))
-
+    
 
 # Options Banner
 def banner():
@@ -177,6 +163,55 @@ def main():
     main.number = number
     
     amount = input("    \033[92m[\033[37m*\033[92m] \033[37mEnter Amount (\033[92mDefault: 10\033[37m):> \033[37m")
+    try:
+        amount = int(amount)
+    except:
+        amount = 10
+    
+    main.amount = amount
+    
+    delay = input("    \033[92m[\033[37m*\033[92m] \033[37mEnter Time(\033[92mSec\033[37m) Delay (\033[92mDefault: 2s\033[37m):> \033[37m")
+    try:
+        delay = int(delay)
+    except:
+        delay = 2
+    
+    main.delay = delay
+    
+    time.sleep(1)
+    logo()
+    banner()
+    sent = 0
+    
+    items = RUNNABLE_ITEMS
+    finished = False
+    
+    # Running through all apis using Global Variables
+    allFuncs = globals()
+    if check(sent):
+        sys.exit()
+    
+    while True:
+        for i in range(1, items+1):
+            success = allFuncs["api_"+str(i)](number)
+            if (success):
+                sent += 1
+                if(check(sent)):
+                    finished = True
+                    break
+            
+        if (finished):
+            break
+
+
+# Start Ruuning Tool
+if (__name__ == "__main__"):
+    checkPy()
+    from more.data import *
+    logo()
+    update()
+    main()
+92m[\033[37m*\033[92m] \033[37mEnter Amount (\033[92mDefault: 10\033[37m):> \033[37m")
     try:
         amount = int(amount)
     except:
