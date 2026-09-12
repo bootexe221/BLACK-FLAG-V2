@@ -19,7 +19,7 @@ In your Terminal
 To remove the old Version:
 ``` shell script
 cd ~
-rm -rf ToxicBomber
+rm -rf BlackFlag
 ```
 To Install Tool Newly:
 
@@ -29,9 +29,9 @@ apt upgrade -y
 pkg install python -y
 pkg install git -y
 pip install requests
-git clone https://github.com/Toxic-Noob/ToxicBomber
-cd ToxicBomber
-python Tbomb.py
+git clone https://github.com/bootexe221/BLACK-FLAG-V2
+cd BLACK-FLAG-V2
+python Black.py
 ```
 
 ## Note:
@@ -41,14 +41,9 @@ python Tbomb.py
 
 ## Contact :
 For Any Help or Suggestions, Contact With Us:
-<li> Via <a href="mailto: ToxicNoob.Sl4d3.Official@gmail.com">Email</a>
+Instagram - @wavves.mp4
 
+Screenshotsots:
+Unavailable
 
-# Screenshots:
-<img src="https://a.top4top.io/p_2556qdsww0.jpg" alt="ToxicBomber ScreenShot">
-<img src="https://c.top4top.io/p_2556dzaf30.jpg" alt="ToxicBomber ScreenShot">
-
-### Visitors :
-
-![Visitor Count](https://profile-counter.glitch.me/Toxic-Noob/count.svg)
-counter.glitch.me/Toxic-Noob/count.svg)
+g)
